@@ -1,0 +1,15 @@
+:root {
+  --color-red: #ff735c;
+  --color-black: #1a2e35;
+  --color-gray: #e4e4f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}

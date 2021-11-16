@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 - Prevenção</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/result.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div id="formContainer">
+            <div class="container-fluid banner">
+                <h2>Confira suas chances de pegar COVID-19</h2>
+                <a href="#form">
+                    <button class="button-start">Responder</button>
+                </a>
+            </div>
+            <div class="container" id="form">
+                <div class="area-questions">
+                    <div class="row">
+                        <div class="col">
+                            <h1>Questionário</h1>
+                        </div>
+                    </div>
+                    <form name="formulario" action="RegisterControler" method="post">
+                        <h2>Dados Pessoais</h2>
+                        <div class="form-row">
+                            <div class="col-sm-12">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <input name="nome" type="text" required class="form-control" placeholder="Nome">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <input name="sobrenome" required type="text" class="form-control" placeholder="Sobrenome">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <select name="idade" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                    <option value="Idade" selected>Idade</option>
+                                    <option value="1">0-24</option>
+                                    <option value="2">25-39</option>
+                                    <option value="3">40-59</option>
+                                    <option value="4">60-75</option>
+                                    <option value="5">+75</option>
+                                </select>
+                            </div>
+                        </div>
+                        <h2>Perguntas</h2>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <p>1.Quantas vezes você sai de casa durante a semana?</p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pergunta1" id="p1-opcao1" value="20">
+                                    <label class="form-check-label" for="p1-opcao1">
+                                        10 a 20 vezes.
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pergunta1" id="p1-opcao2" value="17">
+                                    <label class="form-check-label" for="p1-opcao2">
+                                        8 a 10 vezes.
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pergunta1" id="p1-opcao3" value="12">
+                                    <label class="form-check-label" for="p1-opcao3">
+                                        5 a 8 vezes.
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pergunta1" id="p1-opcao4" value="8">
+                                    <label class="form-check-label" for="p1-opcao4">
+                                        3 a 5 vezes.
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pergunta1" id="p1-opcao5" value="3">
+                                    <label class="form-check-label" for="p1-opcao5">
+                                        1 a 3 vezes.
+                                    </label>
+                                </div>
+                            </div>
+            
+                            <div class="form-group col-md-6">
+                                <p>2.Quais as formas de isolamento você acha mais adequada diante do Covid-19?</p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pergunta2" id="p2-opcao1" value="1">
+                                    <label class="form-check-label" for="p2-opcao1">
+                                        Lock-Down Horizontal e Completo
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pergunta2" id="p2-opaco2" value="9">
+                                    <label class="form-check-label" for="p2-opaco2">
+                                        Lock-Down Horizontal e Parcial
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pergunta2" id="p2-opaco3" value="25">
+                                    <label class="form-check-label" for="p2-opaco3">
+                                        Isolamento Vertical
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pergunta2" id="p2-opcao4" value="25">
+                                    <label class="form-check-label" for="p2-opcao4">
+                                        Isolamento Transversal
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pergunta2" id="p2-opcao5" value="50">
+                                    <label class="form-check-label" for="p2-opcao5">
+                                        Sem qualquer tipo de isolamento
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <p>3.Se você apresentasse sintomas de febre e tosse seca, o que você faria?</p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pergunta3" id="p3-opcao1" value="10">
+                                    <label class="form-check-label" for="p3-opcao1">
+                                        Chamaria alguém para cuidar de mim
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pergunta3" id="p3-opcao2" value="20">
+                                    <label class="form-check-label" for="p3-opcao2">
+                                        Procuraria um posto de saúde
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pergunta3" id="p3-opcao3" value="20">
+                                    <label class="form-check-label" for="p3-opcao3">
+                                        Iria à farmácia comprar cloroquina
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pergunta3" id="p3-opcao4" value="4">
+                                    <label class="form-check-label" for="p3-opcao4">
+                                        Ficaria em casa em observação
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pergunta3" id="p3-opcao5" value="1">
+                                    <label class="form-check-label" for="p3-opcao5">
+                                        Ficaria em casa em isolamento e observação
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <p>4.Diante da pandemia, o que você considera mais importante?</p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pergunta4" id="p4-opcao1" value="20">
+                                    <label class="form-check-label" for="p4-opcao1">
+                                        Preservar a economia a qualquer custo
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pergunta4" id="p4-opcao2" value="15">
+                                    <label class="form-check-label" for="p4-opcao2">
+                                        Preservar a economia, fazendo um relaxamento moderado da quarentena
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pergunta4" id="p4-opcao3" value="10">
+                                    <label class="form-check-label" for="p4-opcao3">
+                                        Preservar a economia e a saúde da sociedade como um todo
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pergunta4" id="p4-opcao4" value="4">
+                                    <label class="form-check-label" for="p4-opcao4">
+                                        Preservar a minha saúde seguindo recomendações de entidades públicas
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pergunta4" id="p4-opcao5" value="1">
+                                    <label class="form-check-label" for="p4-opcao5">
+                                        Seguir a risca às recomendações da OMC (Organização Mundial de Saúde)
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <button type="button" class="btn btn-primary mt-3 mb-3 d-flex" id="btnSend">
+                                    Enviar
+                                    <span class="material-icons">
+                                        done
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="alert alert-danger d-none" role="alert" id="message">
+            
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="resultContainer" class="d-block">
+        <div class="container-fluid page-area d-flex">
+            <div class="area-result">
+                <div class="area-image">
+                    <img src="./assets/professionals.jpg" alt="">
+                </div>
+                <div class="area-percent">
+                    <h2 id="nomeResult"></h2>
+                    <h1 id="result"></h1>
+                    <p>de chances de contrair COVID-19</p>
+                    <a href=""><button class="btn btn-secondary d-flex">
+                            <span class="material-icons">
+                                arrow_back
+                            </span>
+                            Voltar
+                        </button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/validation.js"></script>
+</body>
+
+</html>
